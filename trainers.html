@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700&family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Trainers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'], body: ['Open Sans','ui-sans-serif','system-ui'] }, extend: { colors: { accent: '#D4AF37' } } }
+    }
+  </script>
+  <style> :root { --font-primary: ; --font-secondary: ; }</style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;" class="bg-[#0C0D12] text-white" style="font-family: var(--font-primary);">
+  <header class="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-md">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3"><span class="text-2xl font-extrabold">Pulse</span><span class="text-sm text-gray-300 hidden md:inline-block">Trainers</span></div>
+      <a href="#book-session" class="text-sm border border-gray-300 px-3 py-1 rounded">Book</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[60vh] md:h-[72vh] overflow-hidden">
+    <img src="https://source.unsplash.com/random/1600x900/?Trainers,hero" alt="Trainers hero" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Meet Pulse Trainers</h1>
+        <p class="mt-4 text-lg">Certifications, specialties, and client results</p>
+        <a href="#book-session" class="mt-6 inline-block bg-[#D4AF37] text-black px-6 py-3 rounded-full hover:scale-105 transition-transform">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainer Bios -->
+  <section id="trainer-bios" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="trainers-title">
+    <h2 id="trainers-title" class="text-3xl md:text-4xl font-bold mb-6">Trainer Bios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-white text-black rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+        <img src="https://images.unsplash.com/photo-1756203739982-41c7960d33f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHx0cmFpbmVyMSUyMHBob3RvfGVufDB8MHx8fDE3NjA5ODAyODl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Alex Kim" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Alex Kim</h3>
+          <p class="text-sm">Certifications: ACSM • Strength Specialist</p>
+        </div>
+      </article>
+      <article class="bg-white text-black rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+        <img src="https://pixabay.com/get/ga027b410f5773106e4ff54faf8bf0f9a3e202a6917918c4445d9003021023ee4816d36ec3c6e1d30e756ea3218b92d29_640.jpg" alt="Priya Singh" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Priya Singh</h3>
+          <p class="text-sm">Certifications: NASM • Mobility Expert</p>
+        </div>
+      </article>
+      <article class="bg-white text-black rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+        <img src="https://images.pexels.com/photos/34322761/pexels-photo-34322761.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Luis Martinez" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Luis Martinez</h3>
+          <p class="text-sm">Certifications: NSCA • Endurance Coach</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Expertise Filters -->
+  <section id="expertise-filters" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="filters-title">
+    <h2 id="filters-title" class="text-2xl font-semibold mb-4">Expertise & Availability</h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="px-3 py-1 rounded-full bg-white text-black">Strength</span>
+      <span class="px-3 py-1 rounded-full bg-white text-black">Mobility</span>
+      <span class="px-3 py-1 rounded-full bg-white text-black">Yoga</span>
+      <span class="px-3 py-1 rounded-full bg-white text-black">HD coaching</span>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="testimonials-title">
+    <h2 id="testimonials-title" class="text-3xl md:text-4xl font-bold mb-6">Client Testimonials</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">"Transformed my approach to training."<br><span class="text-xs text-gray-700">- Ava</span></div>
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">"Clear guidance and real results."<br><span class="text-xs text-gray-700">- Mateo</span></div>
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">"Supportive coaches and actionable plans."<br><span class="text-xs text-gray-700">- Zoe</span></div>
+    </div>
+  </section>
+
+  <!-- Booking Modal (placeholder) -->
+  <section id="book-session" class="max-w-6xl mx-auto px-4 py-8" aria-label="Book session">
+    <div class="rounded-xl bg-white text-black p-6 shadow-lg flex items-center justify-between gap-4">
+      <div>
+        <h3 class="font-semibold">Book Your Free Session</h3>
+        <p class="text-sm">Tell us your goals and we’ll tailor a plan</p>
+      </div>
+      <button class="px-4 py-2 rounded-full bg-[#D4AF37] hover:scale-105 transition-transform">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Training Plans -->
+  <section id="training-plans" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="plans-title">
+    <h2 id="plans-title" class="text-3xl md:text-4xl font-bold mb-6">Training Plans</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl shadow-lg p-6">
+        <h4 class="font-semibold mb-2">4-Week Jumpstart</h4>
+        <p class="text-sm">Plan highlights and expected outcomes</p>
+      </div>
+      <div class="bg-white text-black rounded-xl shadow-lg p-6">
+        <h4 class="font-semibold mb-2">4-Week Mobility</h4>
+        <p class="text-sm">Focus on movement quality and range</p>
+      </div>
+      <div class="bg-white text-black rounded-xl shadow-lg p-6">
+        <h4 class="font-semibold mb-2">Endurance Builder</h4>
+        <p class="text-sm">Aerobic capacity and stamina</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/60 text-gray-300 py-6">
+    <div class="max-w-6xl mx-auto px-4 text-sm">Footer content</div>
+  </footer>
+</body>
+</html>
