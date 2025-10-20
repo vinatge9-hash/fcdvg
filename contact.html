@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700&family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'], body: ['Open Sans','ui-sans-serif','system-ui'] }, extend: { colors: { accent: '#D4AF37' } } } }
+  </script>
+  <style> :root { --font-primary: ; --font-secondary: ; }</style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;" class="bg-[#0C0D12] text-white" style="font-family: var(--font-primary);">
+  <header class="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-md">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3"><span class="text-2xl font-extrabold">Pulse</span><span class="text-sm text-gray-300 hidden md:inline-block">Contact</span></div>
+      <a href="#schedule-tour" class="text-sm border border-gray-300 px-3 py-1 rounded">Schedule Tour</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[60vh] md:h-[72vh] overflow-hidden">
+    <img src="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Contact hero" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold">We’d love to hear from you</h1>
+        <p class="mt-4 text-lg">Questions, booking, feedback — reach out</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Map Hub -->
+  <section class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6" aria-label="Contact form and map">
+    <form id="contact-form" class="bg-white text-black rounded-xl p-6 shadow-lg" action="#" method="post">
+      <h3 class="font-semibold text-xl mb-4">Contact Us</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Your name" class="w-full rounded border border-gray-300 px-3 py-2" />
+        <input type="email" placeholder="Email" class="w-full rounded border border-gray-300 px-3 py-2" />
+      </div>
+      <textarea placeholder="Your message" class="w-full mt-4 h-32 rounded border border-gray-300 px-3 py-2"></textarea>
+      <button class="mt-4 px-4 py-2 rounded-full bg-[#D4AF37]">Send Message</button>
+    </form>
+    <div class="bg-white text-black rounded-xl p-6 shadow-lg flex flex-col justify-between">
+      <div>
+        <h4 class="font-semibold">Locations Hub</h4>
+        <p class="text-sm">Find nearby Pulse locations with hours and directions.</p>
+      </div>
+      <div class="mt-4 h-64 rounded-xl bg-gray-100 text-black flex items-center justify-center">https://images.pexels.com/photos/17485633/pexels-photo-17485633.png?auto=compress&cs=tinysrgb&h=650&w=940</div>
+    </div>
+  </section>
+
+  <!-- Hours & Address -->
+  <section id="hours-address" class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6" aria-labelledby="hours-title">
+    <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+      <h4 class="font-semibold">Hours</h4>
+      <p class="text-sm">Mon–Fri: 5am–11pm</p>
+      <p class="text-sm">Sat–Sun: 7am–9pm</p>
+    </div>
+    <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+      <h4 class="font-semibold">Our Address</h4>
+      <p class="text-sm">123 Pulse Ave, City</p>
+      <p class="text-sm mt-1">Parking available</p>
+    </div>
+  </section>
+
+  <!-- Social & Support -->
+  <section id="social-support" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="support-title">
+    <h2 id="support-title" class="text-2xl font-semibold mb-4">Support</h2>
+    <div class="flex flex-wrap gap-4 items-center">
+      <a href="#" class="text-sm border border-gray-300 px-3 py-1 rounded">Live Chat</a>
+      <a href="#" class="text-sm border border-gray-300 px-3 py-1 rounded">Help Center</a>
+      <a href="#" class="text-sm border border-gray-300 px-3 py-1 rounded">Email</a>
+    </div>
+  </section>
+
+  <!-- Schedule a Tour CTA -->
+  <section id="schedule-tour" class="max-w-6xl mx-auto px-4 py-8" aria-label="Schedule tour">
+    <div class="rounded-xl bg-white text-black p-6 shadow-lg flex items-center justify-between gap-4">
+      <div>
+        <h3 class="font-semibold">Schedule a Tour</h3>
+        <p class="text-sm">See facilities in person and ask questions</p>
+      </div>
+      <button class="px-4 py-2 rounded-full bg-[#D4AF37]">Schedule Tour</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/60 text-gray-300 py-6">
+    <div class="max-w-6xl mx-auto px-4 text-sm">Footer</div>
+  </footer>
+</body>
+</html>
