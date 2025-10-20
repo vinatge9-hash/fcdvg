@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700&family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Locations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'], body: ['Open Sans','ui-sans-serif','system-ui'] }, extend: { colors: { accent: '#D4AF37' } } }
+    }
+  </script>
+  <style> :root { --font-primary: ; --font-secondary: ; }</style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;" class="bg-[#0C0D12] text-white" style="font-family: var(--font-primary);">
+  <header class="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-md">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3"><span class="text-2xl font-extrabold">Pulse</span><span class="text-sm text-gray-300 hidden md:inline-block">Locations</span></div>
+      <a href="#location-map" class="text-sm border border-gray-300 px-3 py-1 rounded">Find Map</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1678049312104-d1ebeaf02952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwzfHxMb2NhdGlvbnMlMjBoZXJvfGVufDB8MHx8fDE3NjA5ODAyODd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Locations hero" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold">Find Pulse near you</h1>
+        <p class="mt-4 text-lg">Nearest club in seconds</p>
+        <a href="#location-map" class="mt-6 inline-block bg-[#D4AF37] text-black px-6 py-3 rounded-full hover:scale-105 transition-transform">Find My Location</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map -->
+  <section id="location-map" class="max-w-6xl mx-auto px-4 py-8" aria-label="Location map">
+    <div class="w-full h-80 rounded-xl overflow-hidden bg-white/5 shadow-inner mb-6">
+      <img src="https://images.unsplash.com/photo-1736117705737-28851abf2860?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxtYXAlMjBwbGFjZWhvbGRlcnxlbnwwfDB8fHwxNzYwOTgwMjg4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Map placeholder" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <!-- Locations List -->
+  <section id="locations-list" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="locations-title">
+    <h2 id="locations-title" class="text-3xl md:text-4xl font-bold mb-6">Pulse Locations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+        <h3 class="font-semibold">Pulse Downtown</h3>
+        <p class="text-sm">123 Main St</p>
+        <p class="text-xs text-gray-700 mt-1">Hours: 5am–11pm</p>
+      </div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+        <h3 class="font-semibold">Pulse Uptown</h3>
+        <p class="text-sm">45 Pine Ave</p>
+        <p class="text-xs text-gray-700 mt-1">Hours: 6am–10pm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  <section id="hours-contact" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="hours-title">
+    <h2 id="hours-title" class="text-2xl font-semibold mb-4">Location Hours & Contact</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+        <h4 class="font-semibold">Downtown</h4>
+        <p class="text-sm">Mon–Fri: 5am–11pm</p>
+        <p class="text-sm">Sat/Sun: 7am–9pm</p>
+        <p class="text-xs text-gray-700 mt-2">Phone: (555) 123-4567</p>
+      </div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+        <h4 class="font-semibold">Uptown</h4>
+        <p class="text-sm">Mon–Fri: 6am–10pm</p>
+        <p class="text-sm">Sat: 8am–6pm</p>
+        <p class="text-xs text-gray-700 mt-2">Phone: (555) 987-6543</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Tour CTA -->
+  <section id="book-tour" class="max-w-6xl mx-auto px-4 py-8" aria-label="Book a tour">
+    <div class="rounded-xl bg-white text-black p-6 shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="font-semibold">Book a tour</h3>
+        <p class="text-sm">See facilities and meet our team</p>
+      </div>
+      <button class="px-5 py-3 rounded-full bg-[#D4AF37] hover:scale-105 transition-transform">Schedule Tour</button>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="max-w-6xl mx-auto px-4 py-8" aria-label="Newsletter">
+    <div class="bg-gradient-to-r from-black to-gray-800 rounded-xl p-6 shadow-lg text-gray-100">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h3 class="font-semibold">Stay in the loop</h3>
+          <p class="text-sm">Get updates on new locations and events</p>
+        </div>
+        <form class="flex gap-2 w-full md:w-auto" action="#" method="post">
+          <input type="email" placeholder="Your email" class="bg-transparent border border-gray-600 rounded-full px-4 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-accent" />
+          <button class="px-6 py-2 rounded-full bg-[#D4AF37] text-black hover:scale-105 transition-transform">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/60 text-gray-300 py-6">
+    <div class="max-w-6xl mx-auto px-4 text-sm">Pulse Locations footer</div>
+  </footer>
+</body>
+</html>
