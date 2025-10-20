@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700&family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Memberships</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'], body: ['Open Sans','ui-sans-serif','system-ui'] }, extend: { colors: { accent: '#D4AF37' } } }
+    }
+  </script>
+  <style> :root { --font-primary: ; --font-secondary: ; }</style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;" class="bg-[#0C0D12] text-white" style="font-family: var(--font-primary);">
+  <header class="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-md">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3"><span class="text-2xl font-extrabold">Pulse</span><span class="text-sm text-gray-300 hidden md:inline-block">Memberships</span></div>
+      <a href="#join-flow" class="text-sm border border-gray-300 px-3 py-1 rounded">Join</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[60vh] md:h-[72vh] overflow-hidden">
+    <img src="https://source.unsplash.com/random/1600x900/?Membership,hero" alt="Membership hero" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Memberships tailored to your goals</h1>
+        <p class="mt-4 text-lg">Access, value, community</p>
+        <div class="mt-6 flex gap-4 justify-center">
+          <a href="#plans" class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold">See Plans</a>
+          <a href="#join-flow" class="border border-[#D4AF37] px-6 py-3 rounded-full font-semibold text-white">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans Grid -->
+  <section id="plans" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="plans-title">
+    <h2 id="plans-title" class="text-3xl md:text-4xl font-bold mb-6">Plans</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow">
+        <h3 class="font-semibold mb-2">Starter</h3>
+        <p class="text-sm">Classes + facilities</p>
+        <p class="mt-4 text-2xl font-bold">$19/mo</p>
+        <button class="mt-4 w-full px-4 py-2 rounded-full bg-[#D4AF37]">Join Today</button>
+      </div>
+      <div class="bg-white text-black rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow">
+        <h3 class="font-semibold mb-2">Pro</h3>
+        <p class="text-sm">Everything Starter + guest passes</p>
+        <p class="mt-4 text-2xl font-bold">$39/mo</p>
+        <button class="mt-4 w-full px-4 py-2 rounded-full bg-[#D4AF37]">Join Today</button>
+      </div>
+      <div class="bg-white text-black rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow">
+        <h3 class="font-semibold mb-2">Elite</h3>
+        <p class="text-sm">All access + premium perks</p>
+        <p class="mt-4 text-2xl font-bold">$59/mo</p>
+        <button class="mt-4 w-full px-4 py-2 rounded-full bg-[#D4AF37]">Join Today</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inclusions & Pricing -->
+  <section id="inclusions" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="inclusions-title">
+    <h2 id="inclusions-title" class="text-2xl font-semibold mb-4">What’s included</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Classes, facilities, guest passes, and perks.</div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Member events and community access.</div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Priority booking and exclusive discounts.</div>
+    </div>
+  </section>
+
+  <!-- Pricing Table -->
+  <section id="pricing-table" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="pricing-title">
+    <h2 id="pricing-title" class="text-2xl font-semibold mb-4">Pricing Comparison</h2>
+    <div class="overflow-x-auto bg-white text-black rounded-xl shadow-lg p-4">
+      <table class="w-full table-auto border-collapse">
+        <thead>
+          <tr class="text-left border-b">
+            <th class="px-4 py-2">Plan</th><th class="px-4 py-2">Classes</th><th class="px-4 py-2">Facilities</th><th class="px-4 py-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2">Starter</td><td class="px-4 py-2">3x/Week</td><td class="px-4 py-2">Gym, Pool</td><td class="px-4 py-2">$19/mo</td></tr>
+          <tr class="border-b"><td class="px-4 py-2 font-semibold">Pro</td><td class="px-4 py-2">5x/Week</td><td class="px-4 py-2">Gym, Pool, Studios</td><td class="px-4 py-2">$39/mo</td></tr>
+          <tr><td class="px-4 py-2">Elite</td><td class="px-4 py-2">Unlimited</td><td class="px-4 py-2">All Access</td><td class="px-4 py-2">$59/mo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Join Flow -->
+  <section id="join-flow" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="join-title">
+    <h2 id="join-title" class="text-3xl md:text-4xl font-bold mb-6">Join Flow</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Step 1: Choose plan</div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Step 2: Personal details</div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Step 3: Payment & confirmation</div>
+    </div>
+  </section>
+
+  <!-- Promotions -->
+  <section id="promotions" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="promotions-title">
+    <h2 id="promotions-title" class="text-2xl font-semibold mb-4">Current Offers</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Trial week at $0 for first-time members</div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Corporate memberships available</div>
+      <div class="bg-white text-black rounded-xl p-6 shadow-lg">Student discounts</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials-2" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="testimonials-title-2">
+    <h2 id="testimonials-title-2" class="text-2xl font-semibold mb-4">Member Testimonials</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">"Pulse changed my routine completely."</div>
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">"The community keeps me accountable."</div>
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">"Excellent facilities and trainers."</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="text-2xl font-semibold mb-4">FAQ</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">Q: Can I cancel anytime? A: Yes, cancel anytime with no penalties.</div>
+      <div class="bg-white text-black rounded-xl p-4 shadow-lg">Q: Are there guest passes? A: Yes, guest passes are available with plans.</div>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <section class="bg-black/60 text-white py-8" aria-labelledby="cta-title">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <h3 id="cta-title" class="text-xl font-semibold">Ready to join Pulse?</h3>
+      <a href="#join-flow" class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">Join Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/60 text-gray-300 py-6">
+    <div class="max-w-6xl mx-auto px-4 text-sm">Footer</div>
+  </footer>
+</body>
+</html>
