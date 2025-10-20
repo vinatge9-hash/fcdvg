@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700&family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Fitness Club</title>
+  <meta name="description" content="Pulse Fitness Club - immersive gym with programs, locations, trainers, and memberships." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          body: ['Open Sans', 'ui-sans-serif', 'system-ui']
+        },
+        extend: {
+          colors: {
+            accent: '#D4AF37'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --font-primary: ;
+      --font-secondary: ;
+    }
+  </style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;" class="bg-[#0C0D12] text-white" style="font-family: var(--font-primary);">
+  <!-- Sticky navigation -->
+  <header class="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-md shadow-sm">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl font-extrabold tracking-tight">Pulse</span>
+        <span class="text-sm text-gray-300 hidden md:inline-block">Fitness Club</span>
+      </div>
+      <ul class="hidden md:flex space-x-6 uppercase tracking-wide text-xs font-semibold">
+        <li><a href="#programs" class="hover:underline">Programs</a></li>
+        <li><a href="#locations" class="hover:underline">Locations</a></li>
+        <li><a href="#trainers" class="hover:underline">Trainers</a></li>
+        <li><a href="#memberships" class="hover:underline">Memberships</a></li>
+        <li><a href="#blog" class="hover:underline">Blog</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[64vh] md:h-[72vh] overflow-hidden">
+    <img src="https://pixabay.com/get/g3039aceedaaf4913ee322385092a8cf914ca012d6fc3a37981fd3d88b3321bb263ce0d9aa5feda86801419449042f03073bd520254f585c0ebce92cf0bc0c7ce_640.jpg" alt="Pulse lifestyle hero" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Pulse Fitness Club</h1>
+        <p class="mt-4 text-lg md:text-2xl text-gray-200">Elevate your training. Community that pushes you forward.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+          <a href="#join" class="inline-block bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">Join Now</a>
+          <a href="#tour" class="inline-block border border-gray-300 text-white/90 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">Book a Tour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content container -->
+  <main class="max-w-6xl mx-auto px-4 py-16 md:py-24" id="home-content">
+    <!-- Class Finder -->
+    <section id="class-finder" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Find Your Class</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white text-black rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+          <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+            <div>
+              <label class="block mb-1">Program</label>
+              <select class="w-full bg-gray-100 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Program type">
+                <option>All</option>
+                <option>Strength</option>
+                <option>Cardio</option>
+              </select>
+            </div>
+            <div>
+              <label class="block mb-1">Level</label>
+              <select class="w-full bg-gray-100 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Level">
+                <option>All</option>
+                <option>Beginner</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+            <div>
+              <label class="block mb-1">Time</label>
+              <input class="w-full bg-gray-100 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" type="text" placeholder="Any time" />
+            </div>
+            <div>
+              <label class="block mb-1">Location</label>
+              <input class="w-full bg-gray-100 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" type="text" placeholder="Nearby" />
+            </div>
+          </div>
+          <button class="mt-2 px-4 py-2 rounded-full bg-[#D4AF37] text-black font-semibold hover:scale-105 transition-transform">Find Classes</button>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-lg h-full flex items-center justify-center text-sm text-gray-700 md:min-h-[140px]">
+          <div class="text-center">
+            <div class="h-40 w-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center mb-2">
+              <span class="text-xs opacity-70">Live map view</span>
+            </div>
+            <div class="text-xs">Pins update in real-time</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Preview -->
+    <section id="programs-preview" class="mb-16" aria-labelledby="featured-programs">
+      <h2 id="featured-programs" class="text-3xl md:text-4xl font-bold mb-6">Featured Programs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+          <img src="https://pixabay.com/get/g2339da91514301808dba50aa089d0b0757baf3731896bb8a114bcdf545d2ee7f553c9c754fdfda809b0d37970bc5df33b569d737196fd8ba5574073f24eac294_640.jpg" alt="Power Builder" class="w-full h-48 object-cover" />
+          <div class="p-4 text-black">
+            <h3 class="text-xl font-semibold">Power Builder</h3>
+            <p class="text-sm mt-1">Level: Intermediate • 45m • Equipment: DB + Barbell</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+          <img src="https://pixabay.com/get/gf2734376f45191266d243e13987245aa6f7db02cd1ac9bb428567543cfb407a116aefe7b48c1301f0145ed6d773c190505839aa7f31bfba131c6bcc5a6f56fac_640.jpg" alt="Endurance Studio" class="w-full h-48 object-cover" />
+          <div class="p-4 text-black">
+            <h3 class="text-xl font-semibold">Endurance Studio</h3>
+            <p class="text-sm mt-1">Level: All • 60m • Equipment: Treadmill</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+          <img src="https://images.pexels.com/photos/34315753/pexels-photo-34315753.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Mobility & Core" class="w-full h-48 object-cover" />
+          <div class="p-4 text-black">
+            <h3 class="text-xl font-semibold">Mobility & Core</h3>
+            <p class="text-sm mt-1">Level: Beginner • 40m • Equipment: None</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Facilities Gallery -->
+    <section id="facilities" class="mb-16" aria-labelledby="facilities-title">
+      <h2 id="facilities-title" class="text-3xl md:text-4xl font-bold mb-6">Facilities Gallery</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="https://pixabay.com/get/ge3d1f83b3e5aabc8f61914f808d8e593ed66bef84136a65a3793cceb9cd98acb65eedb64bf4bde06366c096164ef1e1f020711d68c3467763ccb17822aed1978_640.jpg" alt="Gym floor" class="w-full h-64 object-cover" />
+          <figcaption class="p-3 text-sm text-black">Main gym floor with open space</figcaption>
+        </figure>
+        <figure class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="https://images.unsplash.com/photo-1561140895-9d144461935e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxMHx8ZmFjaWxpdHklMjB3ZWlnaHRzfGVufDB8MHx8fDE3NjA5ODAyNzR8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Weight room" class="w-full h-64 object-cover" />
+          <figcaption class="p-3 text-sm text-black">Strength zone with free weights</figcaption>
+        </figure>
+        <figure class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="https://images.pexels.com/photos/8774426/pexels-photo-8774426.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Studio" class="w-full h-64 object-cover" />
+          <figcaption class="p-3 text-sm text-black">Group class studio</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Trainers Spotlight -->
+    <section id="trainers" class="mb-16" aria-labelledby="trainers-title">
+      <h2 id="trainers-title" class="text-3xl md:text-4xl font-bold mb-6">Trainers Spotlight</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <article class="rounded-xl shadow-lg overflow-hidden bg-white text-black hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+          <img src="https://source.unsplash.com/random/1600x900/?trainer1" alt="Alex Kim" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Alex Kim</h3>
+            <p class="text-sm">Strength • HIIT</p>
+          </div>
+        </article>
+        <article class="rounded-xl shadow-lg overflow-hidden bg-white text-black hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.pexels.com/photos/1544774/pexels-photo-1544774.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Priya Singh" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Priya Singh</h3>
+            <p class="text-sm">Mobility • Yoga</p>
+          </div>
+        </article>
+        <article class="rounded-xl shadow-lg overflow-hidden bg-white text-black hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+          <img src="https://source.unsplash.com/random/1600x900/?trainer3" alt="Luis Martinez" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Luis Martinez</h3>
+            <p class="text-sm">Endurance • Conditioning</p>
+          </div>
+        </article>
+        <article class="rounded-xl shadow-lg overflow-hidden bg-white text-black hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+          <img src="https://source.unsplash.com/random/1600x900/?trainer4" alt="Sara Chen" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Sara Chen</h3>
+            <p class="text-sm">Panelist • Nutrition</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Locations Map -->
+    <section id="locations-map" class="mb-16" aria-labelledby="locations-title">
+      <h2 id="locations-title" class="text-3xl md:text-4xl font-bold mb-6">Locations</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div class="rounded-xl bg-white text-black shadow-lg p-4 flex flex-col justify-between hover:shadow-2xl transition-shadow">
+          <div>
+            <h3 class="font-semibold">Pulse Downtown</h3>
+            <p class="text-sm">123 Main St</p>
+          </div>
+          <button class="mt-4 px-4 py-2 rounded-full bg-[#D4AF37] text-black hover:scale-105 transition-transform">View Hours</button>
+        </div>
+        <div class="rounded-xl bg-white text-black shadow-lg p-4 flex flex-col justify-between hover:shadow-2xl transition-shadow">
+          <div>
+            <h3 class="font-semibold">Pulse Uptown</h3>
+            <p class="text-sm">45 Pine Ave</p>
+          </div>
+          <button class="mt-4 px-4 py-2 rounded-full bg-[#D4AF37] text-black hover:scale-105 transition-transform">View Hours</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Sign-up (Location-aware) -->
+    <section id="membership-signup" class="mb-16" aria-labelledby="membership-title">
+      <h2 id="membership-title" class="text-3xl md:text-4xl font-bold mb-6">Membership Signup</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+          <h3 class="font-semibold mb-2">Nearby Sign-up</h3>
+          <p class="text-sm">Register at your local Pulse location for fastest access.</p>
+          <button class="mt-4 px-4 py-2 rounded-full bg-[#D4AF37] text-black hover:scale-105 transition-transform">Join Now</button>
+        </div>
+        <div class="bg-white text-black rounded-xl p-6 shadow-lg">
+          <h3 class="font-semibold mb-2">Guest Pass</h3>
+          <p class="text-sm">Intro pass to try facilities and classes.</p>
+          <button class="mt-4 px-4 py-2 rounded-full bg-[#D4AF37] text-black hover:scale-105 transition-transform">Get Pass</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="mb-16" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title" class="text-3xl md:text-4xl font-bold mb-6">What Members Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-xl bg-white text-black shadow-lg p-6 hover:shadow-2xl transition-shadow">
+          <p class="text-sm">"I joined Pulse and my energy is through the roof. The community is amazing."</p>
+          <p class="mt-2 text-xs text-gray-700">- Jordan</p>
+        </div>
+        <div class="rounded-xl bg-white text-black shadow-lg p-6 hover:shadow-2xl transition-shadow">
+          <p class="text-sm">"The trainers are incredibly knowledgeable and supportive."</p>
+          <p class="mt-2 text-xs text-gray-700">- Mia</p>
+        </div>
+        <div class="rounded-xl bg-white text-black shadow-lg p-6 hover:shadow-2xl transition-shadow">
+          <p class="text-sm">"My mobility improved in weeks. Fantastic facilities."</p>
+          <p class="mt-2 text-xs text-gray-700">- Noah</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="mb-16" aria-labelledby="blog-title">
+      <h2 id="blog-title" class="text-3xl md:text-4xl font-bold mb-6">From the Blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="rounded-xl bg-white text-black shadow-lg p-4 hover:shadow-2xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1638342863994-ae4eee256688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxibG9nMXxlbnwwfDB8fHwxNzYwOTgwMjgwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Blog 1" class="w-full h-48 object-cover rounded-xl mb-2" />
+          <h3 class="font-semibold">Fueling Workouts with Nutrition</h3>
+          <p class="text-sm text-gray-700">A quick guide to timing meals for optimal performance.</p>
+        </article>
+        <article class="rounded-xl bg-white text-black shadow-lg p-4 hover:shadow-2xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1638342863994-ae4eee256688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxibG9nMnxlbnwwfDB8fHwxNzYwOTgwMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Blog 2" class="w-full h-48 object-cover rounded-xl mb-2" />
+          <h3 class="font-semibold">Mobility for Athletes</h3>
+          <p class="text-sm text-gray-700">Simple routine to improve range of motion.</p>
+        </article>
+        <article class="rounded-xl bg-white text-black shadow-lg p-4 hover:shadow-2xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1638342863994-ae4eee256688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxibG9nM3xlbnwwfDB8fHwxNzYwOTgwMjgxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Blog 3" class="w-full h-48 object-cover rounded-xl mb-2" />
+          <h3 class="font-semibold">Community Events Spotlight</h3>
+          <p class="text-sm text-gray-700">How Pulse builds connection beyond workouts.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="mb-16 bg-gradient-to-r from-black to-gray-800 rounded-xl p-6 shadow-lg" aria-labelledby="newsletter-title">
+      <h3 id="newsletter-title" class="text-xl font-semibold mb-2">Stay in the loop</h3>
+      <p class="text-sm text-gray-300 mb-4">Get workouts, events, and community news weekly</p>
+      <form class="flex flex-col sm:flex-row gap-2 items-center" action="#" method="post">
+        <input type="email" placeholder="Your email" class="bg-transparent border border-gray-600 rounded-full px-4 py-2 w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-accent" />
+        <button class="px-6 py-2 rounded-full bg-[#D4AF37] text-black hover:scale-105 transition-transform">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-black/80 text-gray-300 py-8">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div>
+        <h4 class="font-semibold mb-2">Pulse</h4>
+        <p class="text-xs">© Pulse Fitness Club</p>
+      </div>
+      <nav class="text-xs space-y-1">
+        <a class="block hover:underline" href="#programs">Programs</a>
+        <a class="block hover:underline" href="#locations">Locations</a>
+        <a class="block hover:underline" href="#trainers">Trainers</a>
+      </nav>
+      <nav class="text-xs space-y-1">
+        <a class="block hover:underline" href="#membership-signup">Memberships</a>
+        <a class="block hover:underline" href="#blog">Blog</a>
+        <a class="block hover:underline" href="#contact">Contact</a>
+      </nav>
+      <form class="flex items-center space-x-2" action="#" method="post">
+        <input type="email" placeholder="Email" class="bg-transparent border border-gray-600 rounded px-2 py-2 w-full" />
+        <button class="px-3 py-2 rounded-full bg-[#D4AF37]">Go</button>
+      </form>
+    </div>
+  </footer>
+</body>
+</html>
