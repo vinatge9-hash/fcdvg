@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,500,600,700&family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Programs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          body: ['Open Sans', 'ui-sans-serif', 'system-ui']
+        },
+        extend: { colors: { accent: '#D4AF37' } }
+      }
+    }
+  </script>
+  <style>
+    :root { --font-primary: ; --font-secondary: ; }
+  </style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;" class="bg-[#0C0D12] text-white" style="font-family: var(--font-primary);">
+  <header class="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-md">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3"><span class="text-2xl font-extrabold">Pulse</span><span class="text-sm text-gray-300 hidden md:inline-block">Programs</span></div>
+      <ul class="hidden md:flex space-x-6 text-xs font-semibold uppercase tracking-wide">
+        <li><a href="#programs-grid" class="hover:underline">All Programs</a></li>
+        <li><a href="#schedule-overview" class="hover:underline">Schedule</a></li>
+        <li><a href="#trainers" class="hover:underline">Trainers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+    <img src="https://source.unsplash.com/random/1600x900/?Programs,hero" alt="Programs hero" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Diverse Training Programs</h1>
+        <p class="mt-4 text-lg">Strength, endurance, mobility and more—powered by Pulse community</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+          <a href="#programs-grid" class="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">Explore Programs</a>
+          <a href="#schedule-overview" class="border border-[#D4AF37] text-white/90 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">See Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Bar -->
+  <section class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="filters-title">
+    <h2 id="filters-title" class="sr-only">Filters</h2>
+    <div class="w-full bg-white/5 rounded-xl p-4 md:p-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-gray-200">
+      <div>
+        <label class="block mb-1">Type</label>
+        <select class="w-full bg-transparent border border-gray-400 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Program Type">
+          <option>All</option><option>Strength</option><option>Mobility</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">Duration</label>
+        <select class="w-full bg-transparent border border-gray-400 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Duration">
+          <option>All</option><option>30m</option><option>45m</option><option>60m</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">Intensity</label>
+        <select class="w-full bg-transparent border border-gray-400 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Intensity">
+          <option>All</option><option>Low</option><option>Medium</option><option>High</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">Equipment</label>
+        <select class="w-full bg-transparent border border-gray-400 rounded px-2 py-2 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Equipment">
+          <option>None</option><option>Dumbbells</option><option>Barbell</option><option>None</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Grid -->
+  <section id="programs-grid" class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 text-black">
+        <img src="https://source.unsplash.com/random/1600x900/?program1,photo" alt="Power Builder" class="w-full h-48 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Power Builder</h3>
+          <p class="text-sm">Level: Intermediate • 45m • Equipment: Dumbbells + Barbell</p>
+        </div>
+      </article>
+      <article class="card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 text-black">
+        <img src="https://pixabay.com/get/g20333ce0100cc5b4a4c789b675ed9a88da288749145955493e0716c59851c1076b7cc969cf4574c386cf985a6f751f62_640.jpg" alt="Endurance Studio" class="w-full h-48 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Endurance Studio</h3>
+          <p class="text-sm">Level: All • 60m • Equipment: Treadmill</p>
+        </div>
+      </article>
+      <article class="card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1 text-black">
+        <img src="https://pixabay.com/get/g732d212605fb9eb2adf29c9012f50c67e259e24349208c460730e19df16f960664c25f93b5e58d9697b5dd08879cfa5e0531c138eeeacf1199c5ee207de53263_640.jpg" alt="Mobility & Core" class="w-full h-48 object-cover rounded-t-xl" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Mobility & Core</h3>
+          <p class="text-sm">Level: Beginner • 40m • Equipment: None</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Schedule Overview -->
+  <section id="schedule-overview" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="schedule-title">
+    <h2 id="schedule-title" class="text-3xl md:text-4xl font-bold mb-6">Upcoming Schedule</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow-lg p-4 text-black">
+        <h4 class="font-semibold">Power Builder</h4>
+        <p class="text-sm">Mon 6:00 PM • Downtown</p>
+        <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-gray-200 text-black">Limited</span>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-black">
+        <h4 class="font-semibold">Endurance Studio</h4>
+        <p class="text-sm">Tue 7:30 AM • Uptown</p>
+        <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-gray-200 text-black">Open</span>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-black">
+        <h4 class="font-semibold">Mobility & Core</h4>
+        <p class="text-sm">Wed 5:15 PM • Downtown</p>
+        <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-gray-200 text-black">Open</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainer Profiles -->
+  <section id="trainers" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="trainers-title">
+    <h2 id="trainers-title" class="text-3xl md:text-4xl font-bold mb-6">Trainer Profiles</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden text-black hover:shadow-2xl transition-shadow">
+        <img src="https://images.pexels.com/photos/34363033/pexels-photo-34363033.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Alex Kim" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Alex Kim</h3>
+          <p class="text-sm">Certifications: ACSM • Specialties: Strength</p>
+        </div>
+      </article>
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden text-black hover:shadow-2xl transition-shadow">
+        <img src="https://pixabay.com/get/ga62e154692d9953d484fa6e6977999ea9a6dc18d04c285dd1a4b9b7e9c21e45836c2b54e7a33a91e99153829092a1997b8e87a412bd867bcbed923521fa0c509_640.jpg" alt="Priya Singh" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Priya Singh</h3>
+          <p class="text-sm">Certifications: NASM • Specialties: Mobility</p>
+        </div>
+      </article>
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden text-black hover:shadow-2xl transition-shadow">
+        <img src="https://pixabay.com/get/gb9961fb9ad8a0f379e3bf648d06f4735c02f0c1386e31078e77b06e6032ba5aca87b87402a4736db84f1f805583f8de3e06c2e4a053e9d64c3952a565967e0bb_640.jpg" alt="Luis Martinez" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold">Luis Martinez</h3>
+          <p class="text-sm">Certifications: NSCA • Specialties: Endurance</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/60 text-gray-300 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-sm">Footer content and quick links.</div>
+  </footer>
+</body>
+</html>
